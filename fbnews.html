@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+--><meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Welcome to Rainbow</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/responsive.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/lightwindow2.css" />
+<link href="scroller/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/firsteffectabt.css"/>
+<link rel="stylesheet" type="text/css" href="css/hoverabt.css"/>
+<link rel="stylesheet" type="text/css" href="css/menu.css"/>
+<link rel="stylesheet" type="text/css" href="css/responsive_menu.css"/>
+<link rel="stylesheet" type="text/css" href="css/popModal.css"/>
+<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+<link href="css/ddmenu.css" rel="stylesheet" type="text/css" />
+<link href="css/dum.css" rel="stylesheet" type="text/css"/>
+<script src="javascript/ddmenu.js" type="text/javascript"></script>
+
+	<!-- JavaScript -->
+<script type="text/javascript" src="javascript/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="javascript/script.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript" src="scroller/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="scroller/jquery.mousewheel.min.js"></script>
+<script>
+var $j = jQuery.noConflict();
+$j(window).load(function() {
+	mCustomScrollbars();
+});
+
+
+function mCustomScrollbars(){
+	/* 
+	malihu custom scrollbar function parameters: 
+	1) scroll type (values: "vertical" or "horizontal")
+	2) scroll easing amount (0 for no easing) 
+	3) scroll easing type 
+	4) extra bottom scrolling space for vertical scroll type only (minimum value: 1)
+	5) scrollbar height/width adjustment (values: "auto" or "fixed")
+	6) mouse-wheel support (values: "yes" or "no")
+	7) scrolling via buttons support (values: "yes" or "no")
+	8) buttons scrolling speed (values: 1-20, 1 being the slowest)
+	*/
+	$j("#mcs_container").mCustomScrollbar("vertical",300,"easeOutCirc",1.05,"auto","yes","yes",15); 
+}
+
+/* function to fix the -10000 pixel limit of jquery.animate */
+$j.fx.prototype.cur = function(){
+    if ( this.elem[this.prop] != null && (!this.elem.style || this.elem.style[this.prop] == null) ) {
+      return this.elem[ this.prop ];
+    }
+    var r = parseFloat( jQuery.css( this.elem, this.prop ) );
+    return typeof r == 'undefined' ? 0 : r;
+}
+
+/* function to load new content dynamically */
+function LoadNewContent(id,file){
+	$j("#"+id+" .customScrollBox .content").load(file,function(){
+		mCustomScrollbars();
+	});
+}
+</script>
+<script src="scroller/jquery.mCustomScrollbar.js"></script>
+<script src="http://cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
+<script src="javascript/popModal.js"></script>
+<script>
+var $r = jQuery.noConflict();
+$r(function(){
+	$r('#popModal_ex1').click(function(){
+		$r('#popModal_ex1').popModal({
+			html : $r('#cont'),
+			placement : 'bottomLeft',
+			showCloseBut : true,
+			onDocumentClickClose : true,
+			inline : true,
+			overflowContent : false,
+			onOkBut : function(){},
+			onCancelBut : function(){},
+			onLoad : function(){},
+			onClose : function(){}
+		});
+	});
+});
+
+var $r = jQuery.noConflict();
+$r(function(){
+	$r('#popModal_menu').click(function(){
+		$r('#popModal_menu').popModal({
+			html : $r('#cont2'),
+			placement : 'bottomLeft',
+			showCloseBut : true,
+			onDocumentClickClose : true,
+			inline : true,
+			overflowContent : false,
+			onOkBut : function(){},
+			onCancelBut : function(){},
+			onLoad : function(){},
+			onClose : function(){}
+		});
+	});
+});
+</script>
+
+ <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+</head>
+<body>
+<div class="outer">
+<div class="outer_prt1">
+<div class="mb_head">
+   <div id="popModal_menu"><div class="menu_pop">பட்டி</div></div>
+   <div class="mb_tamil"><a href="aboutus.html"><img src="images/mb_en.png" width="29" height="29" alt="tamil"/></a></div>
+   
+   <nav id="ddmenu">
+        <div class="menu-icon"></div>
+        <ul>
+            <li class="mb_comtm">&nbsp;
+                <div>
+                    <div class="column">
+                        <div>
+          <div class="mn_nw"><a href="http://www.rainbowagri.com/cityfarm" target="_blank"><img src="images/mb_cty.png" width="41" height="42" alt="cityfarm"/><div class="md_submenu1">மாடித்தோட்டம்</div></a></div>
+          <div class="mn_nw"><a href="http://www.kalingarayan.org" target="_blank"><img src="images/mb_kal.png" width="41" height="42" alt="kaalingarayan"/><div class="md_submenu1">காலிங்கராயன்</div></a></div>
+          <div class="mn_nw"><a href="https://play.google.com/store/apps/details?id=com.rainbowagri.broadcaster&hl=en" title="Broadcaster" target="_blank" onmouseover="tooltip.pop(this, '#sub4', {position:1, offsetX:-20, effect:'slide'})"><img src="images/mb_br.png" width="41" height="42" alt="Broadcaster"/><div class="md_submenu1">ஒலிபரப்பாளர்</div></a></div>
+          <div class="mn_nw"><a href='#'><img src="images/mb_pasu.png" width="41" height="41" alt="Pasumai Uzhavar Mandram"/><div class="md_submenu1">பசுமை உழவர் மன்றம்</div></a></div>
+          <div class="mn_nw"><a href='#'><img src="images/mb_pasu.png" width="41" height="41" alt="Pasumai Uzhavar Mandram"/><div class="md_submenu1">உழவர் தோட்ட கலை</div></a></div>
+               <div class="mn_nw"><a href='#'><img src="images/mb_pasu.png" width="41" height="41" alt="Pasumai Uzhavar Mandram"/><div class="md_submenu1">வெள்ளியங்கிரி உழவர் குழு</div></a></div>
+               <div class="mn_nw"><a href='#'><img src="images/mb_pasu.png" width="41" height="41" alt="Pasumai Uzhavar Mandram"/><div class="md_submenu1">காலிங்கராயன்பாசனசபை</div></a></div>
+               <div class="mn_nw"><a href='#'><img src="images/mb_pasu.png" width="41" height="41" alt="Pasumai Uzhavar Mandram"/><div class="md_submenu1">மஹா விவசாய கூட்டமைப்பு</div></a></div>
+               <div class="mn_nw"><a href='#'><img src="images/mb_pasu.png" width="41" height="41" alt="Pasumai Uzhavar Mandram"/><div class="md_submenu1">கால்நடை மருத்துவர்கள் குழு<br> - கோபி தாலுகா</div></a></div>
+               <div class="mn_nw"><a href='#'><img src="images/mb_pasu.png" width="41" height="41" alt="Pasumai Uzhavar Mandram"/><div class="md_submenu1">கால்நடை மருத்துவர்கள் குழு<br> - கடுகாம்பாலயம்</div></a></div>
+               <div class="mn_nw"><a href='#'><img src="images/mb_pasu.png" width="41" height="41" alt="Pasumai Uzhavar Mandram"/><div class="md_submenu1">யு 10 கீழ் பவானி ழுறை நீர்பாசன<br> விவசாயிகள் சபை</div></a></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="liv_prctm"><a href="http://www.rainbowagri.com/rainbowagri" target="_blank">&nbsp;</a></li>
+            <li class="buy_sltm"><a href='http://www.carrybag.co.in' target="_blank">&nbsp;</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="abt">
+  <div id='menu'>
+    <ul>
+      <li><a href='aboutus.html'><div class="eng">English</div></a></li>
+       <li><a href='tamil.html'><span>முகப்பு</span></a></li>
+       <li class='active has-sub'><a href='#'><span>நிர்வாகம்</span></a>
+          <ul>
+             <li class='has-sub'><a href='http://rainbowagri.com/rainbowdataar/' target="_blank"><span>தகவல் பராமரிப்பு</span></a></li>
+             <li class='has-sub'><a href='http://rainbowagri.com/SMSstatus/' target="_blank"><span>குருந்தகவல் நிலவரங்கள்</span></a></li>
+          </ul>
+       </li>
+    </ul>
+  </div>
+</div>
+<div class="clear"></div>
+	<div class="abt_cont">
+   	
+    <div class="abt_rgt">
+    <div class="fb-like-box" style="background-color:#edeff4; margin:10px 0 0 0;" data-href="http://www.facebook.com/RainbowAgri" data-width="230" data-height="400" data-show-faces="true" data-stream="true" data-show-border="true" data-header="true"></div>   
+    	
+      </div>
+    </div>				
+	</div>
+<div class="clear" style="height:22px;"></div>
+<div class="copyright">அனைத்து உரிமைகளும் ரெயின்போ அக்ரியால் பாதுகாக்கப்பட்டவை  2014-2018.</div>
+</div>
+</div>
+<script type="text/javascript" src="javascript/prototype.js"></script>
+<script type="text/javascript" src="javascript/effects.js"></script>
+<script type="text/javascript" src="javascript/lightwindow2.js"></script>
+
+
+
+  
+  <div style="display:none"><!--Popup TAB-->
+<div id="cont2">
+			<ul>
+         <li><div class="mb_log"><a href="tamil.html"><img src="images/rblog.png" width="40" height="41" alt="tamil"/></a></div></li>
+      <li><div class="mb_log2"><a href="http://rainbowagri.com/rainbowdataar/" target="_blank"><img src="images/adm.png" width="40" height="47" alt="tamil"/></a></div></li>
+      <li><div class="mb_log3"><a href="http://rainbowagri.com/SMSstatus/" target="_blank"><img src="images/smsic.png" width="40" height="39" alt="tamil"/></a></div></li>
+      </ul>
+</div>
+</div>
+
+</body>
+</html>
